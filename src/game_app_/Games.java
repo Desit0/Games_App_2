@@ -17,8 +17,8 @@ public class Games {
      */
     public static void main(String[] args) {
         Validation b = new Validation();
-        String a="Ivan";
-        String c = "10";
+        String a="Desi";
+        String c = "15";
         
         System.out.println(b.Username(a));
         System.out.println(b.Age(c));
