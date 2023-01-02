@@ -44,8 +44,9 @@ public class Register extends javax.swing.JFrame {
         Background1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Register");
+        setTitle("Register Form");
 
+        jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.setPreferredSize(new java.awt.Dimension(560, 400));
         jPanel1.setLayout(null);
 
