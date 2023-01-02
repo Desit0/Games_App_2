@@ -106,9 +106,9 @@ public class Register extends javax.swing.JFrame {
         jPanel1.add(submit);
         submit.setBounds(230, 350, 88, 29);
 
-        Background1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Desi\\OneDrive\\Desktop\\117624_2.jpg")); // NOI18N
+        Background1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Desi\\OneDrive\\Desktop\\Background\\117624_2.jpg")); // NOI18N
         jPanel1.add(Background1);
-        Background1.setBounds(-3, -4, 570, 410);
+        Background1.setBounds(-3, -4, 560, 400);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

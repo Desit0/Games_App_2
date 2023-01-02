@@ -184,12 +184,12 @@
         <Component class="javax.swing.JLabel" name="Background1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Desi\OneDrive\Desktop\117624_2.jpg"/>
+              <Image iconType="2" name="C:\Users\Desi\OneDrive\Desktop\Background\117624_2.jpg"/>
             </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="-3" y="-4" width="570" height="410"/>
+              <AbsoluteConstraints x="-3" y="-4" width="560" height="400"/>
             </Constraint>
           </Constraints>
         </Component>
