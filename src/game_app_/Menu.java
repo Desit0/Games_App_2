@@ -60,7 +60,7 @@ public class Menu extends javax.swing.JFrame {
                 .addGap(0, 12, Short.MAX_VALUE))
         );
 
-        ChessButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Desi\\OneDrive\\Desktop\\Game_App_\\strategy-icon-6.png")); // NOI18N
+        ChessButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Desi\\OneDrive\\Desktop\\strategy-icon-678.png")); // NOI18N
 
         MemoryButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Desi\\OneDrive\\Desktop\\41pAkBUHnIL._SL1603.jpg")); // NOI18N
         MemoryButton.addActionListener(new java.awt.event.ActionListener() {
