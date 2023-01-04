@@ -73,7 +73,7 @@ public class Menu extends javax.swing.JFrame {
         Chess.setText("Chess");
 
         Memory.setFont(new java.awt.Font("Snap ITC", 0, 24)); // NOI18N
-        Memory.setText("Wordle - BG");
+        Memory.setText("Guess the word");
 
         javax.swing.GroupLayout MenuPanelLayout = new javax.swing.GroupLayout(MenuPanel);
         MenuPanel.setLayout(MenuPanelLayout);
@@ -94,7 +94,7 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(Chess)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Memory)
-                .addGap(129, 129, 129))
+                .addGap(99, 99, 99))
         );
         MenuPanelLayout.setVerticalGroup(
             MenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
