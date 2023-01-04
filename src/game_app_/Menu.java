@@ -62,7 +62,7 @@ public class Menu extends javax.swing.JFrame {
 
         ChessButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Desi\\OneDrive\\Desktop\\Game_App_\\strategy-icon-6.png")); // NOI18N
 
-        MemoryButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Desi\\OneDrive\\Desktop\\Game_App_\\sabinarahimova180404019111.jpg")); // NOI18N
+        MemoryButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Desi\\OneDrive\\Desktop\\41pAkBUHnIL._SL1603.jpg")); // NOI18N
         MemoryButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MemoryButtonActionPerformed(evt);
@@ -70,10 +70,10 @@ public class Menu extends javax.swing.JFrame {
         });
 
         Chess.setFont(new java.awt.Font("Snap ITC", 0, 24)); // NOI18N
-        Chess.setText("CHESS");
+        Chess.setText("Chess");
 
         Memory.setFont(new java.awt.Font("Snap ITC", 0, 24)); // NOI18N
-        Memory.setText("MEMORY");
+        Memory.setText("Wordle - BG");
 
         javax.swing.GroupLayout MenuPanelLayout = new javax.swing.GroupLayout(MenuPanel);
         MenuPanel.setLayout(MenuPanelLayout);
@@ -90,11 +90,11 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(LogoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(MenuPanelLayout.createSequentialGroup()
-                .addGap(144, 144, 144)
+                .addGap(155, 155, 155)
                 .addComponent(Chess)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Memory)
-                .addGap(143, 143, 143))
+                .addGap(129, 129, 129))
         );
         MenuPanelLayout.setVerticalGroup(
             MenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -105,11 +105,11 @@ public class Menu extends javax.swing.JFrame {
                 .addGroup(MenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(MemoryButton, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ChessButton, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(MenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(MenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Chess)
                     .addComponent(Memory))
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
