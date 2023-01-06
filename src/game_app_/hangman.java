@@ -4,6 +4,7 @@
  */
 package game_app_;
 
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -15,6 +16,10 @@ public class hangman {
     private String answer;
     private int lenght;
     private String lines;
+    
+    public String getAnswer(){
+        return answer;
+    }
     
     public void setAnswer(String answer){
         this.answer=answer;
@@ -57,13 +62,13 @@ public class hangman {
         }
         return match;
     }
-    public String dobavqne(char a){
-        //String line= lbl.getText();
+    public String dobavqne(char myletter){ 
+        
         String line ="";
-        if(proverka(a)==true){
+        if(proverka(myletter)==true){
             for (int i = 0; i < answer.length(); i++) {
-                if(answer.charAt(i)==a){
-              line+=a+" ";
+                if(answer.charAt(i)==myletter){
+              line+= myletter +" ";
            }
                 else{
                     line+="_"+" ";
@@ -77,7 +82,13 @@ public class hangman {
         return  line;
     }
 
+    public String Random (){
+        Random rand = new Random();
+        String [] words = {"actor","gold","painting","advertisement"};
+        
+    int i = rand.nextInt(3)+0;
     
+    return words[i];
     
-    
+    }
 }

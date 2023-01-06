@@ -33,7 +33,7 @@ public class Validation {
         double age2 = 0;
 
         for (int i = 0; i < age.length; i++) {
-            age2 = (age[age.length - 1 - i] - 48) * Math.pow(10, i);
+            age2 += (age[age.length - 1 - i] - 48) * Math.pow(10, i);
         }
 
         if (age2 < 18 || age2 > 118) {

@@ -158,18 +158,37 @@ public class Register extends javax.swing.JFrame {
       }
       
       else{
-          
+          Graphics g = jPanel1.getGraphics();
           if(b.Username(username1)==false){
-              Graphics g = username.getGraphics();
-              username.setText("*Invalid data");
+              
               g.setColor(Color.red);
+              g.drawString("*Invalid data", 270, 150);
           }
           
           if(b.Age(age1)==false){
-              Graphics g = age.getGraphics();
-              age.setText("*Invalid data");
+              
               g.setColor(Color.red);
+              g.drawString("*Invalid data", 270, 200);
           }
+          
+          if(b.Email(email1)==false){
+              
+              g.setColor(Color.red);
+              g.drawString("*Invalid data", 270, 240);
+          }
+          
+          if(b.Password(password1)==false){
+              
+              g.setColor(Color.red);
+              g.drawString("*Invalid data", 270, 280);
+          }
+          
+          if(b.RepeatPassword(rpassword1, password1)==false){
+              
+              g.setColor(Color.red);
+              g.drawString("*Invalid data", 270, 320);
+          }
+          
           
       }
         

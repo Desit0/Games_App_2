@@ -61,6 +61,11 @@ public class Hangman1 extends javax.swing.JFrame {
 
         CheckButton.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
         CheckButton.setText("CHECK");
+        CheckButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CheckButtonActionPerformed(evt);
+            }
+        });
 
         Word.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Word.setText("_ _ _ _");
@@ -276,6 +281,23 @@ public class Hangman1 extends javax.swing.JFrame {
     private void letterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_letterActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_letterActionPerformed
+
+    hangman b = new hangman();
+    
+    private void CheckButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckButtonActionPerformed
+        
+        String k = letter.getText();
+        char [] k1 = k.toCharArray(); // k w char ot metoda proverka
+        if(b.proverka(k1 [0])==true){ 
+            
+            for(int i=0; i<b.getAnswer().length(); i++){
+                
+                
+            }
+            
+        }
+        
+    }//GEN-LAST:event_CheckButtonActionPerformed
 
     /**
      * @param args the command line arguments

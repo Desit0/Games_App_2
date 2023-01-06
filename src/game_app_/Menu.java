@@ -127,7 +127,8 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void MemoryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MemoryButtonActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
+        new HangmanMenu().setVisible(true);
     }//GEN-LAST:event_MemoryButtonActionPerformed
 
     /**
