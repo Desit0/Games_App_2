@@ -4,6 +4,8 @@
  */
 package game_app_;
 import game_app_.Validation;
+import java.awt.Color;
+import java.awt.Graphics;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.util.logging.Level;
@@ -151,7 +153,24 @@ public class Register extends javax.swing.JFrame {
             }
          this.dispose();
          new LogIn().setVisible(true);
+        
          
+      }
+      
+      else{
+          
+          if(b.Username(username1)==false){
+              Graphics g = username.getGraphics();
+              username.setText("*Invalid data");
+              g.setColor(Color.red);
+          }
+          
+          if(b.Age(age1)==false){
+              Graphics g = age.getGraphics();
+              age.setText("*Invalid data");
+              g.setColor(Color.red);
+          }
+          
       }
         
         
