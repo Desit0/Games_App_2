@@ -4,6 +4,10 @@
  */
 package game_app_;
 
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Desi
@@ -65,6 +69,11 @@ public class LogIn extends javax.swing.JFrame {
         LogInButton.setBackground(new java.awt.Color(102, 102, 255));
         LogInButton.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         LogInButton.setText("Log In");
+        LogInButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LogInButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout LogInPanelLayout = new javax.swing.GroupLayout(LogInPanel);
         LogInPanel.setLayout(LogInPanelLayout);
@@ -181,6 +190,18 @@ public class LogIn extends javax.swing.JFrame {
         this.dispose();
         new Register().setVisible(true);
     }//GEN-LAST:event_RegisterButtonActionPerformed
+
+    private void LogInButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogInButtonActionPerformed
+        Validation b = new Validation();
+        String Player_ = usernamelogin.getText() + " " + passwordlogin.getText();
+        try {
+            b.Registrations(Player_);
+        } catch (FileNotFoundException ex) {
+            System.out.println("FileNotFoundException");
+        }
+        this.dispose();
+        new Menu().setVisible(true);
+    }//GEN-LAST:event_LogInButtonActionPerformed
 
     /**
      * @param args the command line arguments
