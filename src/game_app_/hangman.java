@@ -15,6 +15,7 @@ public class hangman {
     private String answer;
     private int lenght;
     private String lines;
+    
     public void setAnswer(String answer){
         this.answer=answer;
         setLenght(answer.length());
@@ -77,16 +78,6 @@ public class hangman {
     }
 
     
-    public static void main(String[] args) {
-        
-        Scanner s=new Scanner(System.in);
-        hangman obj=new hangman();
-        obj.setAnswer("3234");
-        String m=s.nextLine();
-        char a=m.charAt(0);
-        obj.setlinestolabel();
-        System.out.println(obj.proverka(a));
-        System.out.println(obj.dobavqne(a));
-    }
+    
     
 }

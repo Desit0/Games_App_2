@@ -151,6 +151,7 @@ public class Register extends javax.swing.JFrame {
             }
          this.dispose();
          new LogIn().setVisible(true);
+         
       }
         
         

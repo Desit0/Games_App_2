@@ -33,8 +33,13 @@ public class HangmanMenu extends javax.swing.JFrame {
         StartButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Hangman");
 
-        Hangman.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        MenuPanel.setBackground(new java.awt.Color(0, 0, 204));
+
+        LogoPanel.setBackground(new java.awt.Color(255, 51, 51));
+
+        Hangman.setFont(new java.awt.Font("PMingLiU-ExtB", 0, 48)); // NOI18N
         Hangman.setText("Hangman");
 
         javax.swing.GroupLayout LogoPanelLayout = new javax.swing.GroupLayout(LogoPanel);
@@ -42,42 +47,48 @@ public class HangmanMenu extends javax.swing.JFrame {
         LogoPanelLayout.setHorizontalGroup(
             LogoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(LogoPanelLayout.createSequentialGroup()
-                .addGap(94, 94, 94)
+                .addGap(99, 99, 99)
                 .addComponent(Hangman)
-                .addContainerGap(108, Short.MAX_VALUE))
+                .addContainerGap(103, Short.MAX_VALUE))
         );
         LogoPanelLayout.setVerticalGroup(
             LogoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LogoPanelLayout.createSequentialGroup()
-                .addGap(34, 34, 34)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LogoPanelLayout.createSequentialGroup()
+                .addContainerGap(21, Short.MAX_VALUE)
                 .addComponent(Hangman)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addGap(19, 19, 19))
         );
 
-        StartButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        StartButton.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         StartButton.setText("Start");
+        StartButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StartButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout MenuPanelLayout = new javax.swing.GroupLayout(MenuPanel);
         MenuPanel.setLayout(MenuPanelLayout);
         MenuPanelLayout.setHorizontalGroup(
             MenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MenuPanelLayout.createSequentialGroup()
-                .addContainerGap(90, Short.MAX_VALUE)
-                .addComponent(LogoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(87, 87, 87))
             .addGroup(MenuPanelLayout.createSequentialGroup()
-                .addGap(149, 149, 149)
-                .addComponent(StartButton, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(MenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MenuPanelLayout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(LogoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(MenuPanelLayout.createSequentialGroup()
+                        .addGap(146, 146, 146)
+                        .addComponent(StartButton, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
         MenuPanelLayout.setVerticalGroup(
             MenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MenuPanelLayout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addGap(53, 53, 53)
                 .addComponent(LogoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
+                .addGap(56, 56, 56)
                 .addComponent(StartButton, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(126, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -93,6 +104,13 @@ public class HangmanMenu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void StartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartButtonActionPerformed
+        this.dispose();
+        new Hangman1().setVisible(true);
+        
+        
+    }//GEN-LAST:event_StartButtonActionPerformed
 
     /**
      * @param args the command line arguments
