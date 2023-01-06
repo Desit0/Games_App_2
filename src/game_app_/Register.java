@@ -6,6 +6,8 @@ package game_app_;
 import game_app_.Validation;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author Desi
@@ -141,8 +143,14 @@ public class Register extends javax.swing.JFrame {
       if(b.Username(username1)==true && b.Age(age1)==true && b.Email(email1)==true &&
               b.Password(password1)==true && b.RepeatPassword(rpassword1,password1)){
           
-          
-         
+          String Player = username1 + " " + password1 + "\n";
+            try {
+                b.File(Player);
+            } catch (FileNotFoundException ex) {
+                System.out.println("FileNotFoundException");
+            }
+         this.dispose();
+         new LogIn().setVisible(true);
       }
         
         
