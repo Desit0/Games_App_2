@@ -104,6 +104,11 @@ public class LogIn extends javax.swing.JFrame {
         RegisterButton.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         RegisterButton.setForeground(new java.awt.Color(204, 0, 204));
         RegisterButton.setText("Don't have an account? Create here!");
+        RegisterButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegisterButtonActionPerformed(evt);
+            }
+        });
 
         LogoPanel.setBackground(new java.awt.Color(204, 255, 255));
 
@@ -171,6 +176,11 @@ public class LogIn extends javax.swing.JFrame {
     private void usernameloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameloginActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_usernameloginActionPerformed
+
+    private void RegisterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterButtonActionPerformed
+        this.dispose();
+        new Register().setVisible(true);
+    }//GEN-LAST:event_RegisterButtonActionPerformed
 
     /**
      * @param args the command line arguments
