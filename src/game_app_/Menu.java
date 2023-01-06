@@ -60,9 +60,9 @@ public class Menu extends javax.swing.JFrame {
                 .addGap(0, 12, Short.MAX_VALUE))
         );
 
-        ChessButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Desi\\OneDrive\\Desktop\\strategy-icon-678.png")); // NOI18N
+        ChessButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Desi\\OneDrive\\Desktop\\Game_App_\\strategy-icon-678.png")); // NOI18N
 
-        MemoryButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Desi\\OneDrive\\Desktop\\41pAkBUHnIL._SL1603.jpg")); // NOI18N
+        MemoryButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Desi\\OneDrive\\Desktop\\hangman12.png")); // NOI18N
         MemoryButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MemoryButtonActionPerformed(evt);
@@ -73,7 +73,7 @@ public class Menu extends javax.swing.JFrame {
         Chess.setText("Chess");
 
         Memory.setFont(new java.awt.Font("Snap ITC", 0, 24)); // NOI18N
-        Memory.setText("Guess the word");
+        Memory.setText("Hangman");
 
         javax.swing.GroupLayout MenuPanelLayout = new javax.swing.GroupLayout(MenuPanel);
         MenuPanel.setLayout(MenuPanelLayout);
@@ -94,7 +94,7 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(Chess)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Memory)
-                .addGap(99, 99, 99))
+                .addGap(153, 153, 153))
         );
         MenuPanelLayout.setVerticalGroup(
             MenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

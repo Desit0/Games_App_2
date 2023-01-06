@@ -61,7 +61,7 @@
                   <Component id="Chess" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="Memory" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="153" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -126,14 +126,14 @@
         <Component class="javax.swing.JButton" name="ChessButton">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Desi\OneDrive\Desktop\strategy-icon-678.png"/>
+              <Image iconType="2" name="C:\Users\Desi\OneDrive\Desktop\Game_App_\strategy-icon-678.png"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="MemoryButton">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Desi\OneDrive\Desktop\41pAkBUHnIL._SL1603.jpg"/>
+              <Image iconType="2" name="C:\Users\Desi\OneDrive\Desktop\hangman12.png"/>
             </Property>
           </Properties>
           <Events>
@@ -153,7 +153,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Snap ITC" size="24" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Guess the word"/>
+            <Property name="text" type="java.lang.String" value="Hangman"/>
           </Properties>
         </Component>
       </SubComponents>
