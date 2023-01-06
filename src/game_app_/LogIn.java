@@ -7,6 +7,7 @@ package game_app_;
 import java.io.FileNotFoundException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -195,12 +196,18 @@ public class LogIn extends javax.swing.JFrame {
         Validation b = new Validation();
         String Player_ = usernamelogin.getText() + " " + passwordlogin.getText();
         try {
-            b.Registrations(Player_);
+            if(b.Registrations(Player_)==true){
+                this.dispose();
+                new Menu().setVisible(true);
+            }
+            else{
+                JOptionPane.showMessageDialog(rootPane, "Are you sure that you have an account?");
+            }
+            
         } catch (FileNotFoundException ex) {
             System.out.println("FileNotFoundException");
         }
-        this.dispose();
-        new Menu().setVisible(true);
+       
     }//GEN-LAST:event_LogInButtonActionPerformed
 
     /**
