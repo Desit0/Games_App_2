@@ -14,43 +14,30 @@ import java.util.Scanner;
 public class hangman {
     
     private String answer;
-    private int lenght;
-    private String lines;
+    private int length;
+    
     
     public String getAnswer(){
         return answer;
     }
     
-    public void setAnswer(String answer){
-        this.answer=answer;
-        setLenght(answer.length());
+    public void setAnswer(String newanswer){
+        this.answer=newanswer;
+        setLength(answer.length());
         
     }
 
-    public int getLenght() {
-        return lenght;
+    public int getLength() {
+        return length;
     }
 
-    public void setLenght(int lenght) {
-        this.lenght = lenght;
+    public void setLength(int newlength) {
+        this.length = newlength;
     }
 
-    public String getLines() {
-        return lines;
-    }
-
-    public void setLines(String lines) {
-        this.lines = lines;
-    }
     
-    public void setlinestolabel(){
-        String a ="";
-        for (int i = 0; i <getLenght(); i++) {
-            a+="_"+" ";
-            
-        }
-        setLines(a);
-    }
+    
+    
     public boolean proverka(char a){
         boolean match=false;
         for (int i = 0; i <answer.length(); i++) {
@@ -62,25 +49,7 @@ public class hangman {
         }
         return match;
     }
-    public String dobavqne(char myletter){ 
-        
-        String line ="";
-        if(proverka(myletter)==true){
-            for (int i = 0; i < answer.length(); i++) {
-                if(answer.charAt(i)==myletter){
-              line+= myletter +" ";
-           }
-                else{
-                    line+="_"+" ";
-                }
-                
-            }
-        }
-        else{
-            System.out.println("nqma");
-        }
-        return  line;
-    }
+    
 
     public String Random (){
         Random rand = new Random();

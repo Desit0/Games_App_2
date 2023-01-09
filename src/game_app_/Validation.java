@@ -48,7 +48,7 @@ public class Validation {
 
     public boolean Email(String email1) {
 
-        Pattern p = Pattern.compile("\\w+@\\\\w+\\\\.[a-zA-Z]{2,3}$");
+        Pattern p = Pattern.compile("\\w+@\\w+\\.[a-zA-Z]{2,3}$");
 
         Matcher m = p.matcher(email1);
 
@@ -57,7 +57,7 @@ public class Validation {
 
     public boolean Password(String password1) {
 
-        Pattern p = Pattern.compile("\\[a-zA-Z_0-9-$%@]{5,17}$");
+        Pattern p = Pattern.compile("[a-zA-Z_0-9-$#%]{5,17}$");
 
         Matcher m = p.matcher(password1);
 
@@ -76,7 +76,7 @@ public class Validation {
     }
 
     public void File(String a) throws FileNotFoundException {
-        PrintStream fileWriter = new PrintStream("C:\\Registrations.txt");
+        PrintStream fileWriter = new PrintStream("C:\\Desktop\\Registrations.txt");
 
         fileWriter.println(a);
         fileWriter.close();
@@ -84,7 +84,7 @@ public class Validation {
 
     public  boolean Registrations(String a) throws FileNotFoundException {
 
-        File file = new File("C:\\Registrations.txt");
+        File file = new File("C:\\Desktop\\Registations.txt");
         Scanner fileReader = new Scanner(file);
         int lineNumber = 0;
 
