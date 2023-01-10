@@ -138,7 +138,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void ChessButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChessButtonActionPerformed
         this.dispose();
-        new FlappyBird().setVisible(true);
+        new FlappyBirdMenu().setVisible(true);
     }//GEN-LAST:event_ChessButtonActionPerformed
 
     /**
