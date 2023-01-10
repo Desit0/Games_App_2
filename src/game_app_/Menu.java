@@ -61,6 +61,11 @@ public class Menu extends javax.swing.JFrame {
         );
 
         ChessButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Desi\\OneDrive\\Desktop\\Game_App_\\strategy-icon-678.png")); // NOI18N
+        ChessButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChessButtonActionPerformed(evt);
+            }
+        });
 
         MemoryButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Desi\\OneDrive\\Desktop\\hangman12.png")); // NOI18N
         MemoryButton.addActionListener(new java.awt.event.ActionListener() {
@@ -130,6 +135,11 @@ public class Menu extends javax.swing.JFrame {
         this.dispose();
         new HangmanMenu().setVisible(true);
     }//GEN-LAST:event_MemoryButtonActionPerformed
+
+    private void ChessButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChessButtonActionPerformed
+        this.dispose();
+        new FlappyBird().setVisible(true);
+    }//GEN-LAST:event_ChessButtonActionPerformed
 
     /**
      * @param args the command line arguments

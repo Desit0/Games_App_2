@@ -129,6 +129,9 @@
               <Image iconType="2" name="C:\Users\Desi\OneDrive\Desktop\Game_App_\strategy-icon-678.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ChessButtonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="MemoryButton">
           <Properties>
