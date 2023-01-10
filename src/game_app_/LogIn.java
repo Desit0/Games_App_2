@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
  */
 public class LogIn extends javax.swing.JFrame {
 
-    
+    int n;
     /**
      * Creates new form LogIn
      */
