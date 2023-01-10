@@ -5,6 +5,7 @@
 package game_app_;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -15,7 +16,7 @@ import javax.swing.JOptionPane;
  */
 public class LogIn extends javax.swing.JFrame {
 
-    int n;
+    
     /**
      * Creates new form LogIn
      */
@@ -207,6 +208,9 @@ public class LogIn extends javax.swing.JFrame {
             
         } catch (FileNotFoundException ex) {
             System.out.println("FileNotFoundException");
+        }
+        catch(IOException ex){
+            Logger.getLogger(LogIn.class.getName()).log(Level.SEVERE, null, ex);
         }
        
     }//GEN-LAST:event_LogInButtonActionPerformed

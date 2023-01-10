@@ -4,10 +4,13 @@
  */
 package game_app_;
 
+import java.io.BufferedReader;
 import java.util.regex.*;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -57,7 +60,7 @@ public class Validation {
 
     public boolean Password(String password1) {
 
-        Pattern p = Pattern.compile("[a-zA-Z_0-9-$#%]{5,17}$");
+        Pattern p = Pattern.compile("^[a-zA-Z_0-9-$#%]{5,17}$");
 
         Matcher m = p.matcher(password1);
 
@@ -82,35 +85,29 @@ public class Validation {
         fileWriter.close();
     }
 
-    public  boolean Registrations(String a) throws FileNotFoundException {
+    public  boolean Registrations(String a) throws FileNotFoundException, IOException {
 
         File file = new File("src\\file_registrations\\Registations.txt");
-        Scanner fileReader = new Scanner(file);
-        int lineNumber = 0;
+         FileReader fr = new FileReader(file);
+         BufferedReader bf = new BufferedReader(fr);
+         String str;
+        
+        boolean match = false;
+        while ((str=bf.readLine())!=null) {
 
-        int n = 0;
 
-        while (fileReader.hasNextLine()) {
+            if (str.equals(a)) {
 
-            lineNumber++;
-
-            if (fileReader.nextLine().compareTo(a) == 0) {
-
-                n++;
+                match = true;
             }
         }
 
-        fileReader.close();
+        return match;
 
-        if (n == 0) {
+        
 
-            return true;
-        } else {
-
-            return false;
-        }
-
-    }
     
-    int n;
+    
+    
+    }
 }
