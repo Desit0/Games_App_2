@@ -306,11 +306,7 @@ public class FlappyBird implements ActionListener, MouseListener, KeyListener
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    static class flappybird {
-
-        public flappybird() {
-        }
-    }
+    
 
 }
 

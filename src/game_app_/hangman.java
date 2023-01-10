@@ -53,7 +53,8 @@ public class hangman {
 
     public String Random (){
         Random rand = new Random();
-        String [] words = {"actor","gold","painting","advertisement"};
+        String [] words = {"actor","gold","painting","advertisement","cartoon", "kitchen", "shoe","kite", "Soccer", "church", "knife"
+};
         
     int i = rand.nextInt(3)+0;
     

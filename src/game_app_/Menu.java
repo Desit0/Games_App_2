@@ -29,10 +29,11 @@ public class Menu extends javax.swing.JFrame {
         MenuPanel = new javax.swing.JPanel();
         LogoPanel = new javax.swing.JPanel();
         LabelLogo = new javax.swing.JLabel();
-        ChessButton = new javax.swing.JButton();
-        MemoryButton = new javax.swing.JButton();
-        Chess = new javax.swing.JLabel();
-        Memory = new javax.swing.JLabel();
+        FlappyBirdButton = new javax.swing.JButton();
+        HangmanButton = new javax.swing.JButton();
+        FlappyBird = new javax.swing.JLabel();
+        Hangman = new javax.swing.JLabel();
+        ChooseGame = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu");
@@ -60,61 +61,75 @@ public class Menu extends javax.swing.JFrame {
                 .addGap(0, 12, Short.MAX_VALUE))
         );
 
-        ChessButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Desi\\OneDrive\\Desktop\\Game_App_\\strategy-icon-678.png")); // NOI18N
-        ChessButton.addActionListener(new java.awt.event.ActionListener() {
+        FlappyBirdButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Desi\\OneDrive\\Desktop\\Speed_15.png")); // NOI18N
+        FlappyBirdButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ChessButtonActionPerformed(evt);
+                FlappyBirdButtonActionPerformed(evt);
             }
         });
 
-        MemoryButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Desi\\OneDrive\\Desktop\\hangman12.png")); // NOI18N
-        MemoryButton.addActionListener(new java.awt.event.ActionListener() {
+        HangmanButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Desi\\OneDrive\\Desktop\\hangman12.png")); // NOI18N
+        HangmanButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MemoryButtonActionPerformed(evt);
+                HangmanButtonActionPerformed(evt);
             }
         });
 
-        Chess.setFont(new java.awt.Font("Snap ITC", 0, 24)); // NOI18N
-        Chess.setText("Chess");
+        FlappyBird.setFont(new java.awt.Font("Snap ITC", 0, 24)); // NOI18N
+        FlappyBird.setText("Flappy Bird");
 
-        Memory.setFont(new java.awt.Font("Snap ITC", 0, 24)); // NOI18N
-        Memory.setText("Hangman");
+        Hangman.setFont(new java.awt.Font("Snap ITC", 0, 24)); // NOI18N
+        Hangman.setText("Hangman");
+
+        ChooseGame.setFont(new java.awt.Font("Snap ITC", 0, 24)); // NOI18N
+        ChooseGame.setText("Choose Game");
 
         javax.swing.GroupLayout MenuPanelLayout = new javax.swing.GroupLayout(MenuPanel);
         MenuPanel.setLayout(MenuPanelLayout);
         MenuPanelLayout.setHorizontalGroup(
             MenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MenuPanelLayout.createSequentialGroup()
-                .addGap(77, 77, 77)
-                .addComponent(ChessButton, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 127, Short.MAX_VALUE)
-                .addComponent(MemoryButton, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(90, 90, 90))
             .addGroup(MenuPanelLayout.createSequentialGroup()
-                .addGap(258, 258, 258)
-                .addComponent(LogoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(MenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MenuPanelLayout.createSequentialGroup()
+                        .addGap(113, 113, 113)
+                        .addComponent(FlappyBird))
+                    .addGroup(MenuPanelLayout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addComponent(FlappyBirdButton, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
+                .addGroup(MenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MenuPanelLayout.createSequentialGroup()
+                        .addComponent(Hangman)
+                        .addGap(148, 148, 148))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MenuPanelLayout.createSequentialGroup()
+                        .addComponent(HangmanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(88, 88, 88))))
+            .addGroup(MenuPanelLayout.createSequentialGroup()
+                .addGroup(MenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MenuPanelLayout.createSequentialGroup()
+                        .addGap(258, 258, 258)
+                        .addComponent(LogoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(MenuPanelLayout.createSequentialGroup()
+                        .addGap(294, 294, 294)
+                        .addComponent(ChooseGame)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(MenuPanelLayout.createSequentialGroup()
-                .addGap(155, 155, 155)
-                .addComponent(Chess)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Memory)
-                .addGap(153, 153, 153))
         );
         MenuPanelLayout.setVerticalGroup(
             MenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MenuPanelLayout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addComponent(LogoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51)
+                .addGap(18, 18, 18)
+                .addComponent(ChooseGame)
+                .addGap(41, 41, 41)
                 .addGroup(MenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(MemoryButton, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ChessButton, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(FlappyBirdButton, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(HangmanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(MenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Chess)
-                    .addComponent(Memory))
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addGroup(MenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(FlappyBird)
+                    .addComponent(Hangman))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -131,15 +146,15 @@ public class Menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void MemoryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MemoryButtonActionPerformed
+    private void HangmanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HangmanButtonActionPerformed
         this.dispose();
         new HangmanMenu().setVisible(true);
-    }//GEN-LAST:event_MemoryButtonActionPerformed
+    }//GEN-LAST:event_HangmanButtonActionPerformed
 
-    private void ChessButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChessButtonActionPerformed
+    private void FlappyBirdButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FlappyBirdButtonActionPerformed
         this.dispose();
         new FlappyBirdMenu().setVisible(true);
-    }//GEN-LAST:event_ChessButtonActionPerformed
+    }//GEN-LAST:event_FlappyBirdButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -177,12 +192,13 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Chess;
-    private javax.swing.JButton ChessButton;
+    private javax.swing.JLabel ChooseGame;
+    private javax.swing.JLabel FlappyBird;
+    private javax.swing.JButton FlappyBirdButton;
+    private javax.swing.JLabel Hangman;
+    private javax.swing.JButton HangmanButton;
     private javax.swing.JLabel LabelLogo;
     private javax.swing.JPanel LogoPanel;
-    private javax.swing.JLabel Memory;
-    private javax.swing.JButton MemoryButton;
     private javax.swing.JPanel MenuPanel;
     // End of variables declaration//GEN-END:variables
 }

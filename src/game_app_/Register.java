@@ -46,6 +46,11 @@ public class Register extends javax.swing.JFrame {
         rpassword = new javax.swing.JTextField();
         submit = new javax.swing.JButton();
         Background1 = new javax.swing.JLabel();
+        Label1 = new javax.swing.JLabel();
+        Label2 = new javax.swing.JLabel();
+        Label3 = new javax.swing.JLabel();
+        Label4 = new javax.swing.JLabel();
+        Label5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Register Form");
@@ -115,6 +120,26 @@ public class Register extends javax.swing.JFrame {
         jPanel1.add(Background1);
         Background1.setBounds(-3, -4, 560, 400);
 
+        Label1.setText("jLabel1");
+        jPanel1.add(Label1);
+        Label1.setBounds(270, 140, 160, 16);
+
+        Label2.setText("jLabel1");
+        jPanel1.add(Label2);
+        Label2.setBounds(270, 190, 150, 10);
+
+        Label3.setText("jLabel1");
+        jPanel1.add(Label3);
+        Label3.setBounds(270, 230, 150, 16);
+
+        Label4.setText("jLabel1");
+        jPanel1.add(Label4);
+        Label4.setBounds(270, 270, 140, 16);
+
+        Label5.setText("jLabel1");
+        jPanel1.add(Label5);
+        Label5.setBounds(270, 320, 140, 16);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -160,33 +185,44 @@ public class Register extends javax.swing.JFrame {
       else{
           Graphics g = jPanel1.getGraphics();
           if(b.Username(username1)==false){
-              
+              Label1.setVisible(false);
               g.setColor(Color.red);
-              g.drawString("*Invalid data", 270, 150);
+              g.drawString("*Invalid username", 270, 150);
+          }
+          else{
+              Label1.setVisible(true);
           }
           
           if(b.Age(age1)==false){
-              
+              Label2.setVisible(false);
               g.setColor(Color.red);
-              g.drawString("*Invalid data", 270, 200);
+              g.drawString("*Invalid age", 270, 200);
+          }else{
+              Label2.setVisible(true);
           }
           
           if(b.Email(email1)==false){
-              
+              Label3.setVisible(false);
               g.setColor(Color.red);
-              g.drawString("*Invalid data", 270, 240);
+              g.drawString("*Invalid email", 270, 240);
+          }else{
+              Label3.setVisible(true);
           }
           
           if(b.Password(password1)==false){
-              
+              Label4.setVisible(false);
               g.setColor(Color.red);
-              g.drawString("*Invalid data", 270, 280);
+              g.drawString("*Invalid password", 270, 280);
+          }else{
+              Label4.setVisible(true);
           }
           
           if(b.RepeatPassword(rpassword1, password1)==false){
-              
+              Label5.setVisible(false);
               g.setColor(Color.red);
-              g.drawString("*Invalid data", 270, 320);
+              g.drawString("*Invalid password", 270, 320);
+          }else{
+              Label5.setVisible(true);
           }
           
           
@@ -236,6 +272,11 @@ public class Register extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background1;
+    private javax.swing.JLabel Label1;
+    private javax.swing.JLabel Label2;
+    private javax.swing.JLabel Label3;
+    private javax.swing.JLabel Label4;
+    private javax.swing.JLabel Label5;
     private javax.swing.JLabel LabelAge;
     private javax.swing.JLabel LabelEmail;
     private javax.swing.JLabel LabelPassword;
