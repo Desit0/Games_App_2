@@ -40,7 +40,6 @@ public class Hangman1 extends javax.swing.JFrame {
         letter = new javax.swing.JTextField();
         CheckButton = new javax.swing.JButton();
         Word = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
         AgainButton = new javax.swing.JButton();
         HangmanPanel = new javax.swing.JPanel();
         Label2 = new javax.swing.JLabel();
@@ -54,13 +53,13 @@ public class Hangman1 extends javax.swing.JFrame {
         Label10 = new javax.swing.JLabel();
         Label1 = new javax.swing.JLabel();
         GTWPanel = new javax.swing.JPanel();
-        TheWord = new javax.swing.JLabel();
+        GuessTheWord = new javax.swing.JLabel();
         Letters = new javax.swing.JLabel();
-        Status = new javax.swing.JLabel();
-        GTWPanel2 = new javax.swing.JPanel();
-        TheWord2 = new javax.swing.JLabel();
+        YH10TriesPanel = new javax.swing.JPanel();
+        YouHave10Tries = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Hangman");
 
         GamePanel.setBackground(new java.awt.Color(102, 204, 255));
 
@@ -81,8 +80,9 @@ public class Hangman1 extends javax.swing.JFrame {
         Word.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         AgainButton.setBackground(new java.awt.Color(255, 51, 51));
-        AgainButton.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        AgainButton.setFont(new java.awt.Font("Segoe UI Black", 0, 16)); // NOI18N
         AgainButton.setText("Play Again!");
+        AgainButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 51)));
         AgainButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AgainButtonActionPerformed(evt);
@@ -182,14 +182,14 @@ public class Hangman1 extends javax.swing.JFrame {
                     .addGroup(HangmanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(Label1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(Label2, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
 
         GTWPanel.setBackground(new java.awt.Color(255, 51, 51));
 
-        TheWord.setFont(new java.awt.Font("Segoe UI Black", 0, 24)); // NOI18N
-        TheWord.setText("Guess the word");
-        TheWord.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
+        GuessTheWord.setFont(new java.awt.Font("Segoe UI Black", 0, 24)); // NOI18N
+        GuessTheWord.setText("Guess the word");
+        GuessTheWord.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
 
         javax.swing.GroupLayout GTWPanelLayout = new javax.swing.GroupLayout(GTWPanel);
         GTWPanel.setLayout(GTWPanelLayout);
@@ -197,40 +197,43 @@ public class Hangman1 extends javax.swing.JFrame {
             GTWPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(GTWPanelLayout.createSequentialGroup()
                 .addGap(39, 39, 39)
-                .addComponent(TheWord)
+                .addComponent(GuessTheWord)
                 .addContainerGap(46, Short.MAX_VALUE))
         );
         GTWPanelLayout.setVerticalGroup(
             GTWPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GTWPanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(TheWord, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(GuessTheWord, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
         Letters.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Letters.setText("             ");
+        Letters.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Letters.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        GTWPanel2.setBackground(new java.awt.Color(255, 51, 51));
+        YH10TriesPanel.setBackground(new java.awt.Color(153, 255, 153));
 
-        TheWord2.setFont(new java.awt.Font("Segoe UI Black", 0, 24)); // NOI18N
-        TheWord2.setText("You have 10 tries");
-        TheWord2.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
+        YouHave10Tries.setFont(new java.awt.Font("Segoe UI Black", 0, 24)); // NOI18N
+        YouHave10Tries.setText("You have 10 tries");
+        YouHave10Tries.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
 
-        javax.swing.GroupLayout GTWPanel2Layout = new javax.swing.GroupLayout(GTWPanel2);
-        GTWPanel2.setLayout(GTWPanel2Layout);
-        GTWPanel2Layout.setHorizontalGroup(
-            GTWPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(GTWPanel2Layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addComponent(TheWord2)
-                .addContainerGap(46, Short.MAX_VALUE))
+        javax.swing.GroupLayout YH10TriesPanelLayout = new javax.swing.GroupLayout(YH10TriesPanel);
+        YH10TriesPanel.setLayout(YH10TriesPanelLayout);
+        YH10TriesPanelLayout.setHorizontalGroup(
+            YH10TriesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(YH10TriesPanelLayout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(YouHave10Tries)
+                .addContainerGap(44, Short.MAX_VALUE))
         );
-        GTWPanel2Layout.setVerticalGroup(
-            GTWPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GTWPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(TheWord2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+        YH10TriesPanelLayout.setVerticalGroup(
+            YH10TriesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(YH10TriesPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(YouHave10Tries, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout GamePanelLayout = new javax.swing.GroupLayout(GamePanel);
@@ -240,55 +243,48 @@ public class Hangman1 extends javax.swing.JFrame {
             .addGroup(GamePanelLayout.createSequentialGroup()
                 .addGroup(GamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(GamePanelLayout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addGroup(GamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Word, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Letters, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(GamePanelLayout.createSequentialGroup()
-                        .addGap(142, 142, 142)
-                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(GamePanelLayout.createSequentialGroup()
                         .addGap(49, 49, 49)
                         .addGroup(GamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(GTWPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(GamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(GamePanelLayout.createSequentialGroup()
-                                    .addGap(22, 22, 22)
-                                    .addComponent(Status, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(39, 39, 39)
-                                    .addComponent(AgainButton, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(GTWPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(GamePanelLayout.createSequentialGroup()
-                                    .addGap(30, 30, 30)
-                                    .addComponent(letter, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(43, 43, 43)
-                                    .addComponent(CheckButton))))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                            .addComponent(GTWPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(GamePanelLayout.createSequentialGroup()
+                                .addComponent(letter, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(36, 36, 36)
+                                .addComponent(CheckButton)
+                                .addGap(34, 34, 34))))
+                    .addGroup(GamePanelLayout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addComponent(Letters, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(GamePanelLayout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(YH10TriesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(GamePanelLayout.createSequentialGroup()
+                        .addGap(123, 123, 123)
+                        .addComponent(AgainButton, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(GamePanelLayout.createSequentialGroup()
+                        .addGap(58, 58, 58)
+                        .addComponent(Word, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addComponent(HangmanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(17, 17, 17))
         );
         GamePanelLayout.setVerticalGroup(
             GamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(GamePanelLayout.createSequentialGroup()
-                .addGap(31, 31, 31)
+                .addGap(43, 43, 43)
                 .addComponent(GTWPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Word, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addGap(23, 23, 23)
                 .addGroup(GamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(letter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CheckButton))
-                .addGap(34, 34, 34)
-                .addComponent(GTWPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(39, 39, 39)
+                .addComponent(YH10TriesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
                 .addComponent(Letters, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55)
-                .addGroup(GamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Status, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AgainButton, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(42, 42, 42)
-                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 24, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(AgainButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GamePanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(HangmanPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -412,8 +408,8 @@ public class Hangman1 extends javax.swing.JFrame {
     private javax.swing.JButton CheckButton;
     private javax.swing.JPanel GTWPanel;
     private javax.swing.JPanel GTWPanel1;
-    private javax.swing.JPanel GTWPanel2;
     private javax.swing.JPanel GamePanel;
+    private javax.swing.JLabel GuessTheWord;
     private javax.swing.JPanel HangmanPanel;
     private javax.swing.JLabel Label1;
     private javax.swing.JLabel Label10;
@@ -426,12 +422,10 @@ public class Hangman1 extends javax.swing.JFrame {
     private javax.swing.JLabel Label8;
     private javax.swing.JLabel Label9;
     private javax.swing.JLabel Letters;
-    private javax.swing.JLabel Status;
-    private javax.swing.JLabel TheWord;
     private javax.swing.JLabel TheWord1;
-    private javax.swing.JLabel TheWord2;
     private javax.swing.JLabel Word;
-    private javax.swing.JLabel jLabel14;
+    private javax.swing.JPanel YH10TriesPanel;
+    private javax.swing.JLabel YouHave10Tries;
     private javax.swing.JTextField letter;
     // End of variables declaration//GEN-END:variables
 }
