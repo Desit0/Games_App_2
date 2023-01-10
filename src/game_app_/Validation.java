@@ -76,7 +76,7 @@ public class Validation {
     }
 
     public void File(String a) throws FileNotFoundException {
-        PrintStream fileWriter = new PrintStream("C:\\Desktop\\Registrations.txt");
+        PrintStream fileWriter = new PrintStream("src\\file_registrations\\Registations.txt");
 
         fileWriter.println(a);
         fileWriter.close();
@@ -84,7 +84,7 @@ public class Validation {
 
     public  boolean Registrations(String a) throws FileNotFoundException {
 
-        File file = new File("C:\\Desktop\\Registations.txt");
+        File file = new File("src\\file_registrations\\Registations.txt");
         Scanner fileReader = new Scanner(file);
         int lineNumber = 0;
 
