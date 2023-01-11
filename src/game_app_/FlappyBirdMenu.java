@@ -109,7 +109,7 @@ public class FlappyBirdMenu extends javax.swing.JFrame {
 
     private void StartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartButtonActionPerformed
         this.dispose();
-        new FlappyBird().setVisible(true);
+        FlappyBird.flappyBird = new FlappyBird();
     }//GEN-LAST:event_StartButtonActionPerformed
 
     /**

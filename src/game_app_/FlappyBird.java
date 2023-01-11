@@ -250,11 +250,11 @@ public class FlappyBird implements ActionListener, MouseListener, KeyListener
 		}
 	}
 
-	public static void main(String[] args)
+	/*public static void main(String[] args)
 	{
 		flappyBird = new FlappyBird();
 	}
-
+*/
 	@Override
 	public void mouseClicked(MouseEvent e)
 	{
@@ -305,6 +305,8 @@ public class FlappyBird implements ActionListener, MouseListener, KeyListener
     void setVisible(boolean b) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
+    
 
     
 
