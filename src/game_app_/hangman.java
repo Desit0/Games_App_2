@@ -56,7 +56,7 @@ public class hangman {
         String [] words = {"actor","gold","painting","advertisement","cartoon", "kitchen", "shoe","kite", "Soccer", "church", "knife"
 };
         
-    int i = rand.nextInt(3)+0;
+    int i = rand.nextInt(11)+0;
     
     return words[i];
     
